@@ -1,0 +1,73 @@
+/* Global Styles */
+body {
+    font-family: "Source Code Pro", monospace;
+    max-width: 700px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+/* Upcoming Deadlines Section */
+.Upcoming {
+    margin-bottom: 40px;
+}
+
+.Upcoming h2 {
+    font-size: 50px;
+    margin: 0 0 20px 0;
+    font-weight: 900;
+}
+
+.Upcoming__list {
+    list-style: none;
+    padding: 0;
+    font-size: 25px;
+}
+
+.Upcoming__item {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.Upcoming__name {
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.Upcoming__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.Upcoming__link:hover {
+    text-decoration: underline;
+}
+
+/* List (All Conference Details) Section */
+.List {
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.List__item {
+    margin-bottom: 30px;
+    padding: 15px 0;
+    border-bottom: 2px dashed #ddd;
+}
+
+.List__title {
+    margin-top: 0;
+}
+
+.List__dates {
+}
+
+.List__link {
+}
+
+.List__deadlines-title {
+}
+
+.List__deadlines {
+    margin-top: 5px;
+}

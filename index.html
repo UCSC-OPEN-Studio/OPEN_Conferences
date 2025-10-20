@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Conference Data</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="src/style.css" />
+    </head>
+    <body>
+        <section class="Upcoming">
+            <h2>YO</h2>
+            <div id="deadlines-view"></div>
+        </section>
+
+        <section class="List">
+            <h2>...</h2>
+            <div id="details-view"></div>
+        </section>
+
+        <!-- EJS Templates -->
+        <script type="text/template" id="deadlines-template">
+            <ul class="Upcoming__list">
+                <% items.forEach(function(item) { %>
+                    <li class="Upcoming__item">
+                        <% if (item.interestedPeople.length > 0) { %><% item.interestedPeople.forEach(function(person, index) { %><span class="Upcoming__name" style="background-color: <%= person.color %>;"><%= person.name %></span><% if (index < item.interestedPeople.length - 1) { %>, <% } %><% }); %><% } else { %>If anyone's interested<% } %>, in <% if (item.isUrgent) { %><span style="color: red;"><%= item.relativeTime %></span><% } else { %><%= item.relativeTime %><% } %> the <%= item.deadline.title %> <% var isPlural = item.deadline.title.charAt(item.deadline.title.length - 1) === 's'; %><%= isPlural ? 'are' : 'is' %> due for <a href="#<%= item.acronym %>" class="Upcoming__link"><%= item.acronym %></a>.
+                    </li>
+                <% }); %>
+            </ul>
+        </script>
+
+        <script type="text/template" id="details-template">
+            <% conferences.forEach(function(conf) { %>
+                <div class="List__item" id="<%= conf.acronym %>">
+                    <h3 class="List__title"><%= conf.name %></h3>
+                    <p class="List__dates"><%= conf.dateRange %> in <%= conf.location %></p>
+                    <p class="List__link"><a href="<%= conf.url %>" target="_blank"><%= conf.url %></a></p>
+                    <p class="List__deadlines-title"><strong>Deadlines:</strong></p>
+                    <ul class="List__deadlines">
+                        <% conf.deadlines.forEach(function(deadline) { %>
+                            <li><%= deadline.formattedDate %> - <%= deadline.title %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+            <% }); %>
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/date-fns@4.1.0/cdn.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js"></script>
+        <script src="src/sort_conferences.js"></script>
+    </body>
+</html>
