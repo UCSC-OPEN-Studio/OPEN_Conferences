@@ -13,7 +13,7 @@
       "location": ["Bydgoszcz", "Poland"],
       "url": "https://sviconference.org/",
       "dates": ["2025-12-01", "2025-12-02"],
-      "interested": ["Nathan", "Jared"],
+      "interested": ["Nathan", "Jared", "Rozy"],
       "deadlines": [
         {
           "title": "Abstract (200-300 words)",
@@ -89,7 +89,7 @@
       "location": ["Copenhagen", "Denmark"],
       "url": "https://fdg2026.org/",
       "dates": ["2026-08-10", "2026-08-14"],
-      "interested": ["Jared"],
+      "interested": ["Jared", "Nathan", "Rozy"],
       "deadlines": [
         {
           "title": "Workshop, competition, and panel proposals",
