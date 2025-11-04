@@ -35,11 +35,11 @@
       "location": ["Albuquerque", "United States"],
       "url": "https://swpaca.org/",
       "dates": ["2026-02-25", "2026-02-28"],
-      "interested": ["Rozy"],
+      "interested": ["Rozy", "Nathan"],
       "deadlines": [
         {
           "title": "Abstract (200-500 words)",
-          "date": "2025-10-31"
+          "date": "2025-11-14"
         },
         {
           "title": "Full papers (for graduate student awards)",
